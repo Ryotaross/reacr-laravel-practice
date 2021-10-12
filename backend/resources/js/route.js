@@ -6,12 +6,14 @@ import {
     Switch,
   } from 'react-router-dom';
 import Example from './pages/Example';
+import Home from './pages/home';
 
   function App() {
     return (
         <div>
             <Switch>
               <Route path='/example' exact component={Example} />
+              <Route parh='/' exact component={Home} />
             </Switch>
         </div>
     );
