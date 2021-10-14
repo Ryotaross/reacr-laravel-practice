@@ -4,14 +4,14 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Post2;
+use App\Post;
 
-class Post2Controller extends Controller
+class PostController extends Controller
 {
     //
     public function index()
     {
-        $posts = Post2::all();
+        $posts = Post::all();
         return response()->json($posts, 200);
     }
 }

@@ -12,7 +12,7 @@ class PostsTableSeeder extends Seeder
     public function run()
     {
         //
-        \DB::table('posts2')->insert([
+        \DB::table('posts')->insert([
             [
                 'name' => 'モーリー',
                 'content' => '肩トレ',
