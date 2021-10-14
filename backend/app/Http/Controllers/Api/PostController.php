@@ -21,6 +21,6 @@ class PostController extends Controller
         $post->name = $request->name;
         $post->content = $request->content;
         $post->save();
-        return response()->json($post,200);
+        return response()->json($post, 200);
     }
 }
