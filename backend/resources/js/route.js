@@ -7,12 +7,14 @@ import {
   } from 'react-router-dom';
 import Example from './pages/Example';
 import Home from './pages/home';
+import PostEdit from './pages/PostEdit';
 
   function App() {
     return (
         <div>
             <Switch>
               <Route path='/example' exact component={Example} />
+              <Route path='/post/edit/:id' exact component={PostEdit} />
               <Route parh='/' exact component={Home} />
             </Switch>
         </div>
