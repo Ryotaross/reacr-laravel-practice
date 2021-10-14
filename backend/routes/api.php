@@ -22,4 +22,5 @@ Route::group(['middleware' => 'api'], function(){
     Route::post('post/create', 'Api\PostController@create');
     Route::post('edit', 'Api\PostController@edit');
     Route::post('update', 'Api\PostController@update');
+    Route::post('delete', 'Api\PostController@delete');
 });

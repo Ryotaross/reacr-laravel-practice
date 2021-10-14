@@ -22,7 +22,7 @@ function Home() {
     const [formData,setFormData] = useState({name:'',content:''});
 
     useEffect(() => {
-      getPostData();
+        getPostData();
     },[])
 
     const getPostData = () => {
@@ -67,7 +67,30 @@ function Home() {
         .catch(error => {
             console.log(error);
         });
-}
+	}
+
+    // createPostの下に記載
+    const deletePost = async (post) => {
+			console.log(1);
+			await axios
+					.post('/api/delete', {
+					id: post.id
+			})
+			.then((res) => {
+					this.setState({
+							posts: res.posts
+					});
+					console.log(2);
+			})
+			.catch(error => {
+					console.log(error);
+					console.log(3);
+			});
+			console.log(4);
+	}
+
+
+
 
 
     let rows = [];
@@ -76,7 +99,7 @@ function Home() {
             name: post.name,
             content: post.content,
             editBtn: <Button color="secondary" variant="contained" key={post.id} href={`/post/edit/${post.id}`}>編集</Button>,
-            deleteBtn: <Button color="primary" variant="contained">完了</Button>
+            deleteBtn: <Button color="primary" variant="contained" href="/" onClick={() => deletePost(post)}>完了</Button>,
         })
     );
 
