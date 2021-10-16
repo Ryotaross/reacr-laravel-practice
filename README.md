@@ -20,7 +20,7 @@ $ make install-recommend-packages # Optional
 
 http://localhost
 
-## Tips
+## Tip
 
 - Read this [Makefile](https://github.com/ucan-lab/docker-laravel/blob/main/Makefile).
 - Read this [Wiki](https://github.com/ucan-lab/docker-laravel/wiki).
